@@ -10,7 +10,6 @@
     height: 300px;
     /*border: 1px solid #f1f1f1;*/
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
-
 }
 
 .flip-card-front img {
@@ -65,5 +64,11 @@
 }
 .flip-card-back p {
     padding-bottom: 0.5rem;
+}
 
+.type-abilities {
+    display: inline-flex;
+    text-align: left;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }

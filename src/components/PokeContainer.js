@@ -8,6 +8,8 @@ function PokeContainer(props) {
   const error = useContext(errorContext);
   const dataPreparing = useContext(dataPreparingContext);
 
+  const listItems = array => array.map((element) => <li>{element}</li>)
+console.log(state)
   const renderTableData = () => {
     return Object.values(state).map((data) => {
       const { name, id, baseExperience, types, abilities } = data;
@@ -29,8 +31,8 @@ function PokeContainer(props) {
                 <h2>{baseExperience}</h2>
                 <p>base experience</p>
                 <p>ID: {id}</p>
-                <p>Types: {types.join(" ")}</p>
-                <p>Abilities: {abilities.join()}</p>
+                <div className="type-abilities"><p>Abilities: {listItems(abilities)}</p></div>
+                <div className="type-abilities"><p>Types: {listItems(types)}</p></div>
               </div>
             </div>
           </div>
@@ -57,7 +59,7 @@ function PokeContainer(props) {
     );
   }
 
-  return <div className="here4">{renderTableData()}</div>;
+  return <div className="">{renderTableData()}</div>;
 }
 
 export default PokeContainer;

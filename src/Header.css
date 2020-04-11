@@ -1,0 +1,8 @@
+h1 {
+    font-family: Pokemon, sans-serif;
+    font-size: 6rem;
+    -webkit-text-stroke: 3px #4169e1;
+    -webkit-text-fill-color: #fff200;
+    margin: 0;
+    padding: 0;
+}
