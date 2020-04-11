@@ -4,15 +4,16 @@ import "../PokeContainer.css";
 import loader from "../ring.svg";
 
 function PokeContainer(props) {
-  const state = useContext(stateContext);
-  const error = useContext(errorContext);
-  const dataPreparing = useContext(dataPreparingContext);
+  const [state, error, dataPreparing] = useContext(stateContext)
+
 
   const listItems = array => array.map((element) => <li>{element}</li>)
 console.log(state)
   const renderTableData = () => {
     return Object.values(state).map((data) => {
       const { name, id, baseExperience, types, abilities } = data;
+
+      //https://www.freeiconspng.com/uploads/no-image-icon-15.png
 
       return (
         <div key={`row ${id}`} className="pokeElement">
@@ -59,7 +60,7 @@ console.log(state)
     );
   }
 
-  return <div className="">{renderTableData()}</div>;
+  return <div>{renderTableData()}</div>;
 }
 
 export default PokeContainer;

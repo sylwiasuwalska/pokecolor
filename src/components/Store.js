@@ -5,12 +5,13 @@ const Store = ({children}) => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
     const [dataPreparing, setDataPreparing] = useState(true);
-
+    const [color, setColor] = useState(1)
     const [pokeState, setPokeState] = useState({});
 
     useEffect(() => {
+        setDataPreparing(true)
         axios
-            .get("https://pokeapi.co/api/v2/pokemon-color/6/")
+            .get(`https://pokeapi.co/api/v2/pokemon-color/${color}/`)
             .then((response) => {
                 setLoading(false);
                 setError("");
@@ -24,7 +25,7 @@ const Store = ({children}) => {
                 setPokeState("");
                 setError(true);
             });
-    }, []);
+    }, [color]);
 
     const pokeDataFetch = (data) => {
         const responsesSpecies = [];
@@ -68,20 +69,15 @@ const Store = ({children}) => {
     };
 
     return (
-        <errorContext.Provider value={error}>
-            <dataPreparingContext.Provider value={dataPreparing}>
-                <stateContext.Provider value={pokeState}>
-                    <loadingContext.Provider value={loading}>
+        <colorContext.Provider value={[color, setColor]}>
+                <stateContext.Provider value={[pokeState, error, dataPreparing]}>
                         {children}
-                    </loadingContext.Provider>
                 </stateContext.Provider>
-            </dataPreparingContext.Provider>
-        </errorContext.Provider>
+        </colorContext.Provider>
     );
 };
 
 export const stateContext = createContext();
-export const loadingContext = createContext();
-export const errorContext = createContext();
-export const dataPreparingContext = createContext();
+export const colorContext = createContext();
+
 export default Store;
