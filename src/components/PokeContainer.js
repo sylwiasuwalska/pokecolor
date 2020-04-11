@@ -28,13 +28,6 @@ function PokeContainer(props) {
         });
     };
 
-
-    useEffect(() => {
-        console.log("set state")
-            setPokeData(state);
-
-    }, [state]);
-
     //preventing from render when server doesn't respond
     if (error) {
         return (
@@ -44,7 +37,7 @@ function PokeContainer(props) {
         );
     }
 
-    if (pokeData[0]) {
+    if (dataPreparing) {
         console.log("here pokedata empty")
         return (
             <div>
@@ -55,7 +48,7 @@ function PokeContainer(props) {
 
     return (
         <div className="here4">
-
+            {renderTableData()}
         </div>
 
     );

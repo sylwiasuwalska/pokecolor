@@ -28,19 +28,16 @@ const Store = ({children}) => {
 
     const pokeDataFetch = (data) => {
         const responsesSpecies = [];
-        const responsesPokemon = [];
-        const pokeData = [];
-        const allPromises = [];
 
-        for (let i = 0; i <= data.pokemon_species.length - 1; i++) {
-            responsesSpecies[i] = axios
-                .get(data.pokemon_species[i].url)
+        data.pokemon_species.map((currentElement, index) => {
+            responsesSpecies[index] = axios
+                .get(currentElement.url)
                 .then((response) => {
-                    for (let j = 0; j <= response.data.varieties.length - 1; j++) {
-                        responsesPokemon[j] = axios
-                            .get(response.data.varieties[j].pokemon.url)
+                    const responsesPokemon = [];
+                    response.data.varieties.map((currEl, ind) => {
+                        responsesPokemon[ind] = axios
+                            .get(currEl.pokemon.url)
                             .then((response) => {
-                                //console.log(response.data)
                                 const name = response.data.name;
                                 const id = response.data.id;
                                 const baseExperience = response.data.base_experience;
@@ -50,21 +47,23 @@ const Store = ({children}) => {
                                 const abilities = response.data.abilities.map(
                                     (property) => property.ability.name
                                 );
-                                pokeData.push({name, id, baseExperience, types, abilities});
-                                console.log("fetch" + i + " " + j);
+                                return {name, id, baseExperience, types, abilities};
                             });
-                    }
-                    console.log("fetch" + i + " " );
+                    });
+
+                    return Promise.all(responsesPokemon).then((data) => {
+                        return data;
+                    });
                 })
+
                 .catch(() => {
                     setError(true);
                 });
-        }
+        });
 
-        Promise.all(responsesSpecies).then(() => {
-            setPokeState(pokeData);
-            setDataPreparing(false);
-            console.log("allPromises");
+        Promise.all(responsesSpecies).then((data) => {
+           setPokeState(data.flat());
+           setDataPreparing(false)
         });
     };
 
