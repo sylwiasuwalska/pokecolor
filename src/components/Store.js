@@ -10,7 +10,7 @@ const Store = ({children}) => {
 
     useEffect(() => {
         axios
-            .get("https://pokeapi.co/api/v2/pokemon-color/1/")
+            .get("https://pokeapi.co/api/v2/pokemon-color/6/")
             .then((response) => {
                 setLoading(false);
                 setError("");
