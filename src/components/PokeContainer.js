@@ -1,6 +1,7 @@
 import React, {useContext, useEffect, useState} from "react";
 import {colorContext, stateContext} from "./Store";
 import Pagination from "./Pagination";
+import Filtering from "./Filtering";
 import "../PokeContainer.css";
 import loader from "../ring.svg";
 import {colors} from "../colors.js";
@@ -13,13 +14,30 @@ function PokeContainer(props) {
     const [currentPage, setCurrentPage] = useState(1);
     const [itemsPerPage] = useState(12);
 
-    const listItems = (array) =>
-        array.map((element, index) => <li key={index}>{element}</li>);
+    const [filterWord, setFilterWord] = useState();
+
+    //filtering
+    console.log(pokeData)
+    const filterList = (array) => {
+        let filteredData = Object.values(array);
+        filteredData = filteredData.filter((data) => {
+            return (
+                data.id.toString().search(filterWord.toLowerCase()) !== -1 ||
+                data.name.toLowerCase().search(filterWord.toLowerCase()) !== -1  ||
+                data.baseExperience.toString().search(filterWord.toLowerCase()) !== -1 ||
+                data.types.toString().search(filterWord.toLowerCase()) !== -1 ||
+                data.abilities.toString().search(filterWord.toLowerCase()) !== -1);
+        });
+        setPokeData(filteredData);
+    };
 
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
-    const renderTableData = () => {
+    // rendering data
+    const listItems = (array) =>
+        array.map((element, index) => <li key={index}>{element}</li>);
 
+    const renderTableData = () => {
         //pagination
         const indexOfLastItem = currentPage * itemsPerPage;
         const indexOfFirstItem = indexOfLastItem - itemsPerPage;
@@ -72,6 +90,10 @@ function PokeContainer(props) {
     };
 
     useEffect(() => {
+        filterList(state);
+    }, [filterWord]);
+
+    useEffect(() => {
         if (state[0]) {
             setPokeData(state);
         }
@@ -97,9 +119,13 @@ function PokeContainer(props) {
 
     return (
         <div>
+            <Filtering
+                setFilterWord={setFilterWord}
+                setCurrentPage={setCurrentPage}
+            />
             <Pagination
                 rowsPerPage={itemsPerPage}
-                totalRows={state.length}
+                totalRows={pokeData.length}
                 paginate={paginate}
                 currentPage={currentPage}
             />
