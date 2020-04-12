@@ -1,10 +1,16 @@
 import React from "react";
 import "../Filtering.css";
+import {colors} from "../colors.js"
 
-function Filtering({setFilterWord, setCurrentPage}) {
+function Filtering({color, setFilterWord, setCurrentPage}) {
+
+    const colorName = colors.find((element) => {
+        if (color === element.id) return element.name;
+    });
+    console.log(colorName.name)
     return (
         <div className="filtering">
-            <p>Filter Pokemon's information here: </p>
+            <p>Filter info about {colorName.name} Pokemons here: </p>
             <input
                 type="text"
                 placeholder=""

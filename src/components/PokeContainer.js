@@ -46,6 +46,8 @@ function PokeContainer(props) {
             if (color === element.id) return element.color;
         });
 
+        const checkIfWhite = () => (colorElement.color === "#faf4ee") ? ("#626466") : ("#fff")
+
         return Object.values(currentItems).map((data) => {
             const {name, id, baseExperience, types, abilities} = data;
 
@@ -68,7 +70,7 @@ function PokeContainer(props) {
                                             "https://www.freeiconspng.com/uploads/no-image-icon-15.png";
                                     }}
                                 />
-                                <h2>{name}</h2>
+                                <h2 style={{color: checkIfWhite()}}>{name}</h2>
                             </div>
                             <div className="flip-card-back">
                                 <h2>{baseExperience}</h2>
@@ -123,6 +125,7 @@ function PokeContainer(props) {
     return (
         <div>
             <Filtering
+                color={color}
                 setFilterWord={setFilterWord}
                 setCurrentPage={setCurrentPage}
             />
