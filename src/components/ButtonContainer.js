@@ -2,52 +2,10 @@ import React, {useContext} from "react";
 import Button from "react-bootstrap/Button";
 import "../ButtonContainer.css";
 import {colorContext} from "./Store";
+import {colors} from "../colors.js"
 
 function ButtonContainer(props) {
   const [color, setColor] = useContext(colorContext);
-  //TODO: decide whether put colors in separate file
-  const colors = [
-    {
-      id: 1,
-      name: "black",
-    },
-    {
-      id: 2,
-      name: "blue",
-    },
-    {
-      id: 3,
-      name: "brown",
-    },
-    {
-      id: 4,
-      name: "grey",
-    },
-    {
-      id: 5,
-      name: "green",
-    },
-    {
-      id: 6,
-      name: "pink",
-    },
-    {
-      id: 7,
-      name: "purple",
-    },
-    {
-      id: 8,
-      name: "red",
-    },
-    {
-      id: 9,
-      name: "white",
-    },
-    {
-      id: 10,
-      name: "yellow",
-    },
-  ];
 
   const buttonList = Object.values(colors).map((currentElement, index) => {
     return (
@@ -55,7 +13,7 @@ function ButtonContainer(props) {
         variant="primary"
         size="lg"
         key={index}
-        style={{ background: currentElement.name }}
+        style={{ backgroundColor: currentElement.color, borderColor: currentElement.color, borderRadius: 0 }}
         onClick={()=> setColor(currentElement.id)}
       >
         {currentElement.name}{" "}
@@ -64,8 +22,8 @@ function ButtonContainer(props) {
   });
 
   return (
-    <div>
-      <h3>Choose color of Pokemons you want to see:</h3>
+    <div className="buttonContainer">
+      <h4>Choose color of Pokemons you want to see:</h4>
       <div>{buttonList}</div>
 
     </div>

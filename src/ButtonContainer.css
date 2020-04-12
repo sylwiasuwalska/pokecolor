@@ -1,6 +1,7 @@
+.buttonContainer {
+    margin-bottom: 2rem;
+}
 Button {
-
     width: 250px;
     margin: 0.25rem;
-    border-radius: 0;
 }

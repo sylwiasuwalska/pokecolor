@@ -1,15 +1,20 @@
-import React, { useContext, useEffect, useState } from "react";
-import { dataPreparingContext, errorContext, stateContext } from "./Store";
+import React, { useContext} from "react";
+import {colorContext, stateContext} from "./Store";
 import "../PokeContainer.css";
 import loader from "../ring.svg";
+import {colors} from "../colors.js"
 
 function PokeContainer(props) {
   const [state, error, dataPreparing] = useContext(stateContext)
+  const [color, setColor] = useContext(colorContext);
 
 
-  const listItems = array => array.map((element) => <li>{element}</li>)
-console.log(state)
+  const listItems = array => array.map((element, index) => <li key={index}>{element}</li>)
+
   const renderTableData = () => {
+
+    const colorElement = colors.find((element) => {if (color === element.id) return element.color})
+
     return Object.values(state).map((data) => {
       const { name, id, baseExperience, types, abilities } = data;
 
@@ -22,7 +27,7 @@ console.log(state)
         <div key={`row ${id}`} className="pokeElement">
           <div className="flip-card">
             <div className="flip-card-inner">
-              <div className="flip-card-front">
+              <div className="flip-card-front" style={{backgroundColor: colorElement.color}}>
                 <img
                   src={`https://pokeres.bastionbot.org/images/pokemon/${id}.png `}
                   width="200px"
@@ -56,7 +61,7 @@ console.log(state)
 
   if (dataPreparing) {
     return (
-      <div>
+      <div className="dataPreparing">
         <img src={loader} alt="ball" height="100px" width="100px"/>
         <p>Preparing your data. Please wait.</p>
       </div>

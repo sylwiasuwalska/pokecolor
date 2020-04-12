@@ -1,3 +1,9 @@
+.dataPreparing {
+    padding: 2rem;
+    min-height: 30vh;
+    padding-bottom: 5rem;
+}
+
 .pokeElement {
     display: inline-flex;
     margin: 1rem;
