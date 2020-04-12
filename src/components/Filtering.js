@@ -4,7 +4,7 @@ import "../Filtering.css";
 function Filtering({setFilterWord, setCurrentPage}) {
     return (
         <div className="filtering">
-            <p>Filter your data here: </p>
+            <p>Filter Pokemon's information here: </p>
             <input
                 type="text"
                 placeholder=""

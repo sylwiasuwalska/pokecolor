@@ -4,5 +4,6 @@ h1 {
     -webkit-text-stroke: 3px #4169e1;
     -webkit-text-fill-color: #fff200;
     margin: 0;
+    margin-top: 2rem;
     padding-bottom: 2rem;
 }

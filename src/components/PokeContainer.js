@@ -17,7 +17,6 @@ function PokeContainer(props) {
     const [filterWord, setFilterWord] = useState();
 
     //filtering
-    console.log(pokeData)
     const filterList = (array) => {
         let filteredData = Object.values(array);
         filteredData = filteredData.filter((data) => {
@@ -41,13 +40,13 @@ function PokeContainer(props) {
         //pagination
         const indexOfLastItem = currentPage * itemsPerPage;
         const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-        const currentRows = pokeData.slice(indexOfFirstItem, indexOfLastItem);
+        const currentItems = pokeData.slice(indexOfFirstItem, indexOfLastItem);
 
         const colorElement = colors.find((element) => {
             if (color === element.id) return element.color;
         });
 
-        return Object.values(currentRows).map((data) => {
+        return Object.values(currentItems).map((data) => {
             const {name, id, baseExperience, types, abilities} = data;
 
             return (
@@ -74,7 +73,7 @@ function PokeContainer(props) {
                             <div className="flip-card-back">
                                 <h2>{baseExperience}</h2>
                                 <p>base experience</p>
-                                <p>ID: {id}</p>
+                                <p>Pokedex ID: {id}</p>
                                 <div className="type-abilities">
                                     <p>Abilities: {listItems(abilities)}</p>
                                 </div>
@@ -96,6 +95,8 @@ function PokeContainer(props) {
     useEffect(() => {
         if (state[0]) {
             setPokeData(state);
+            setCurrentPage(1);
+
         }
     }, [state]);
 
@@ -108,6 +109,8 @@ function PokeContainer(props) {
         );
     }
 
+
+    //preventing from render when data isn't prepared yet
     if (dataPreparing) {
         return (
             <div className="dataPreparing">
