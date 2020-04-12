@@ -18,11 +18,6 @@ function PokeContainer(props) {
     return Object.values(state).map((data) => {
       const { name, id, baseExperience, types, abilities } = data;
 
-      //TODO: handle lack of image
-      //https://www.freeiconspng.com/uploads/no-image-icon-15.png
-
-
-
       return (
         <div key={`row ${id}`} className="pokeElement">
           <div className="flip-card">
@@ -33,6 +28,7 @@ function PokeContainer(props) {
                   width="200px"
                   height="200px"
                   alt="pokemon_image"
+                  onError={(e)=>{e.target.onerror = null; e.target.src="https://www.freeiconspng.com/uploads/no-image-icon-15.png"}}
                 />
                 <h2>{name}</h2>
               </div>
