@@ -13,7 +13,10 @@ console.log(state)
     return Object.values(state).map((data) => {
       const { name, id, baseExperience, types, abilities } = data;
 
+      //TODO: handle lack of image
       //https://www.freeiconspng.com/uploads/no-image-icon-15.png
+
+
 
       return (
         <div key={`row ${id}`} className="pokeElement">

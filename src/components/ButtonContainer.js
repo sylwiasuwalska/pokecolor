@@ -4,7 +4,8 @@ import "../ButtonContainer.css";
 import {colorContext} from "./Store";
 
 function ButtonContainer(props) {
-  const [color, setColor] = useContext(colorContext)
+  const [color, setColor] = useContext(colorContext);
+  //TODO: decide whether put colors in separate file
   const colors = [
     {
       id: 1,

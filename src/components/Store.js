@@ -8,6 +8,8 @@ const Store = ({children}) => {
     const [color, setColor] = useState(1)
     const [pokeState, setPokeState] = useState({});
 
+    //TODO: decide what to do with loading
+
     useEffect(() => {
         setDataPreparing(true)
         axios
