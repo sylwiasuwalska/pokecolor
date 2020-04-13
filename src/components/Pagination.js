@@ -1,7 +1,7 @@
 import React from "react";
 import "../Pagination.css";
 
-function Pagination({rowsPerPage, totalRows, paginate, currentPage}) {
+function Pagination({rowsPerPage, totalRows, loadCurrentPage, currentPage}) {
     const pageNumbers = [];
     for (let i = 1; i <= Math.ceil(totalRows / rowsPerPage); i++) {
         pageNumbers.push(i);
@@ -19,7 +19,7 @@ function Pagination({rowsPerPage, totalRows, paginate, currentPage}) {
                 <a
                     key={number}
                     href="javascript:;"
-                    onClick={() => paginate(number)}
+                    onClick={() => loadCurrentPage(number)}
                     className={getPageIndicator(number)}
                 >
                     {number}

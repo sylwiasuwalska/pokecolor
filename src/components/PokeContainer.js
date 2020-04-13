@@ -30,7 +30,7 @@ function PokeContainer(props) {
         setPokeData(filteredData);
     };
 
-    const paginate = (pageNumber) => setCurrentPage(pageNumber);
+    const loadCurrentPage = (pageNumber) => setCurrentPage(pageNumber);
 
     // rendering data
     const listItems = (array) =>
@@ -132,7 +132,7 @@ function PokeContainer(props) {
             <Pagination
                 rowsPerPage={itemsPerPage}
                 totalRows={pokeData.length}
-                paginate={paginate}
+                loadCurrentPage={loadCurrentPage}
                 currentPage={currentPage}
             />
             <div>{renderTableData()}</div>
