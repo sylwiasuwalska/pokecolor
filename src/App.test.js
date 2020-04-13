@@ -1,9 +1,12 @@
-import React from 'react';
-import { render } from '@testing-library/react';
-import App from './components/App';
+import React from "react";
+import { render, cleanup } from "@testing-library/react";
+import "@testing-library/jest-dom";
+import App from "./components/App";
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+afterEach(cleanup);
+
+test("should take a snapshot of App component", () => {
+  const { asFragment } = render(<App />);
+
+  expect(asFragment(<App />)).toMatchSnapshot();
 });

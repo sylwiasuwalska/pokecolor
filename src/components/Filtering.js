@@ -7,7 +7,7 @@ function Filtering({color, setFilterWord, setCurrentPage}) {
     const colorName = colors.find((element) => {
         if (color === element.id) return element.name;
     });
-    console.log(colorName.name)
+
     return (
         <div className="filtering">
             <p>Filter info about {colorName.name} Pokemons here: </p>

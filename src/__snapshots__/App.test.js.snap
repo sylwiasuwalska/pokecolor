@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should take a snapshot of App component 1`] = `
+<DocumentFragment>
+  <div
+    class="App"
+  >
+    <h1>
+      PoKePedia
+    </h1>
+    <div
+      class="buttonContainer"
+    >
+      <h4>
+        Choose color of Pokemons you want to see:
+      </h4>
+      <div>
+        <button
+          class="btn btn-primary btn-lg"
+          style="background-color: rgb(4, 0, 0); border-color: #040000; border-radius: 0; color: rgb(255, 255, 255);"
+          type="button"
+        >
+          black 
+        </button>
+        <button
+          class="btn btn-primary btn-lg"
+          style="background-color: rgb(27, 52, 97); border-color: #1b3461; border-radius: 0; color: rgb(255, 255, 255);"
+          type="button"
+        >
+          blue 
+        </button>
+        <button
+          class="btn btn-primary btn-lg"
+          style="background-color: rgb(97, 38, 85); border-color: #612655; border-radius: 0; color: rgb(255, 255, 255);"
+          type="button"
+        >
+          purple 
+        </button>
+        <button
+          class="btn btn-primary btn-lg"
+          style="background-color: rgb(195, 23, 54); border-color: #c31736; border-radius: 0; color: rgb(255, 255, 255);"
+          type="button"
+        >
+          red 
+        </button>
+        <button
+          class="btn btn-primary btn-lg"
+          style="background-color: rgb(101, 67, 33); border-color: #654321; border-radius: 0; color: rgb(255, 255, 255);"
+          type="button"
+        >
+          brown 
+        </button>
+        <button
+          class="btn btn-primary btn-lg"
+          style="background-color: rgb(53, 82, 60); border-color: #35523c; border-radius: 0; color: rgb(255, 255, 255);"
+          type="button"
+        >
+          green 
+        </button>
+        <button
+          class="btn btn-primary btn-lg"
+          style="background-color: rgb(98, 100, 102); border-color: #626466; border-radius: 0; color: rgb(255, 255, 255);"
+          type="button"
+        >
+          grey 
+        </button>
+        <button
+          class="btn btn-primary btn-lg"
+          style="background-color: rgb(228, 205, 5); border-color: #e4cd05; border-radius: 0; color: rgb(255, 255, 255);"
+          type="button"
+        >
+          yellow 
+        </button>
+        <button
+          class="btn btn-primary btn-lg"
+          style="background-color: rgb(231, 179, 167); border-color: #e7b3a7; border-radius: 0; color: rgb(255, 255, 255);"
+          type="button"
+        >
+          pink 
+        </button>
+        <button
+          class="btn btn-primary btn-lg"
+          style="background-color: rgb(250, 244, 238); border-color: #faf4ee; border-radius: 0; color: rgb(98, 100, 102);"
+          type="button"
+        >
+          white 
+        </button>
+      </div>
+    </div>
+    <div
+      class="dataPreparing"
+    >
+      <img
+        alt="ball"
+        height="100px"
+        src="ring.svg"
+        width="100px"
+      />
+      <p>
+        Preparing your data. Please wait.
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;

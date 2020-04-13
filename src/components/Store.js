@@ -29,6 +29,7 @@ const Store = ({children}) => {
             });
     }, [color]);
 
+    //TODO: refactor blocks of code as functions
     const pokeDataFetch = (data) => {
         const responsesSpecies = [];
 
