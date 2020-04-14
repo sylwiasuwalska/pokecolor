@@ -3,7 +3,7 @@ import { colorContext, stateContext } from "./Store";
 import Pagination from "./Pagination";
 import Filtering from "./Filtering";
 import Sorting from "./Sorting";
-import "../PokeContainer.css";
+import "../styles/PokeContainer.css";
 import loader from "../ring.svg";
 import { colors } from "../colors.js";
 import { Col, Container, Row } from "react-bootstrap";

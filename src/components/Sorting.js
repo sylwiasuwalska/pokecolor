@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import "../Sorting.css";
+import "../styles/Sorting.css";
 
 function Sorting({data, setData}) {
     const [fieldToSort, setFieldToSort] = useState(null);

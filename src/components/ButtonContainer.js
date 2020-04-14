@@ -1,6 +1,6 @@
 import React, {useContext} from "react";
 import Button from "react-bootstrap/Button";
-import "../ButtonContainer.css";
+import "../styles/ButtonContainer.css";
 import {colorContext} from "./Store";
 import {colors} from "../colors.js"
 

@@ -1,5 +1,5 @@
 import React from "react";
-import "../Pagination.css";
+import "../styles/Pagination.css";
 import {Col} from "react-bootstrap";
 
 function Pagination({ rowsPerPage, totalRows, loadCurrentPage, currentPage }) {

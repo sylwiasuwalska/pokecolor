@@ -1,6 +1,6 @@
 import React, {Fragment} from "react";
 import {Col, Form} from "react-bootstrap";
-import "../Filtering.css";
+import "../styles/Filtering.css";
 import { colors } from "../colors.js";
 
 function Filtering({ color, setFilterWord, setCurrentPage }) {

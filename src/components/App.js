@@ -4,7 +4,7 @@ import Store from "./Store";
 import Header from "./Header";
 import PokeContainer from "./PokeContainer";
 
-import "../App.css";
+import "../styles/App.css";
 import ButtonContainer from "./ButtonContainer";
 
 function App() {
