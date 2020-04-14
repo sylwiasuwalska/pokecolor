@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "79555f5805534712b7d4d61e69be6851",
+    "revision": "8dd9be6c1649c295640f59a613dc922e",
     "url": "/pokecolor/index.html"
   },
   {
-    "revision": "6625203045e5c034bb25",
+    "revision": "2e57eac3f3a8a1917214",
     "url": "/pokecolor/static/css/2.de424728.chunk.css"
   },
   {
-    "revision": "7307a9d87dd739e88d45",
-    "url": "/pokecolor/static/css/main.cc16f6fd.chunk.css"
+    "revision": "38455ae64dcf7af70641",
+    "url": "/pokecolor/static/css/main.a73c97c7.chunk.css"
   },
   {
-    "revision": "6625203045e5c034bb25",
-    "url": "/pokecolor/static/js/2.56bea641.chunk.js"
+    "revision": "2e57eac3f3a8a1917214",
+    "url": "/pokecolor/static/js/2.076fe236.chunk.js"
   },
   {
     "revision": "5ac48c47bb3912b14c2d8de4f56d5ae8",
-    "url": "/pokecolor/static/js/2.56bea641.chunk.js.LICENSE.txt"
+    "url": "/pokecolor/static/js/2.076fe236.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7307a9d87dd739e88d45",
-    "url": "/pokecolor/static/js/main.cde5476f.chunk.js"
+    "revision": "38455ae64dcf7af70641",
+    "url": "/pokecolor/static/js/main.860e907b.chunk.js"
   },
   {
     "revision": "c1af15f8af1de658e4d2",
