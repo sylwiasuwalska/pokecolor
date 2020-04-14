@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d88c77a2dfca41449e40f87f31f46f94",
+    "revision": "9909968baf874a4df0c19e7a80c42e5a",
     "url": "/pokecolor/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/pokecolor/static/css/2.de424728.chunk.css"
   },
   {
-    "revision": "428e171a738a97cd7f27",
-    "url": "/pokecolor/static/css/main.9b1cc492.chunk.css"
+    "revision": "dfd9b8d406d3aa41563e",
+    "url": "/pokecolor/static/css/main.78d20fa8.chunk.css"
   },
   {
     "revision": "6625203045e5c034bb25",
@@ -20,12 +20,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/pokecolor/static/js/2.56bea641.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "428e171a738a97cd7f27",
+    "revision": "dfd9b8d406d3aa41563e",
     "url": "/pokecolor/static/js/main.cde5476f.chunk.js"
   },
   {
     "revision": "c1af15f8af1de658e4d2",
     "url": "/pokecolor/static/js/runtime-main.6300bb53.js"
+  },
+  {
+    "revision": "35faea11a5be82d23a4dc7e7d7207fa1",
+    "url": "/pokecolor/static/media/pokemon_solid-webfont.35faea11.woff"
+  },
+  {
+    "revision": "40209a69b82ea0a9f15311e712ea49f0",
+    "url": "/pokecolor/static/media/pokemon_solid-webfont.40209a69.woff2"
   },
   {
     "revision": "4c461beb017664f8c41dd25d43941c01",
