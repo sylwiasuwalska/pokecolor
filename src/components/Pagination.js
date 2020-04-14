@@ -1,5 +1,6 @@
 import React from "react";
 import "../Pagination.css";
+import {Col} from "react-bootstrap";
 
 function Pagination({ rowsPerPage, totalRows, loadCurrentPage, currentPage }) {
   const pageNumbers = [];
@@ -11,26 +12,21 @@ function Pagination({ rowsPerPage, totalRows, loadCurrentPage, currentPage }) {
     if (number === 0) {
       return 1;
     }
-    if (number === array.length+1) {
+    if (number === array.length + 1) {
       return array.length;
     }
     return number;
   };
 
   return (
-    <div className="pagination">
-      <a
-        href="javascript:;"
-        onClick={() => loadCurrentPage(1)}
+    <Col sm={12} md={6} className="pagination">
 
-      >
-        first
-      </a>
+      <a onClick={() => loadCurrentPage(1)}>first</a>
 
       <a
-        href="javascript:;"
-        onClick={() => loadCurrentPage(getFirstAndLastItem(currentPage-1, pageNumbers))}
-
+        onClick={() =>
+          loadCurrentPage(getFirstAndLastItem(currentPage - 1, pageNumbers))
+        }
       >
         ≪
       </a>
@@ -38,20 +34,16 @@ function Pagination({ rowsPerPage, totalRows, loadCurrentPage, currentPage }) {
       <p>
         page {currentPage} from {pageNumbers.length}
       </p>
-
       <a
-        href="javascript:;"
-        onClick={() => loadCurrentPage(getFirstAndLastItem(currentPage+1, pageNumbers))}
+        onClick={() =>
+          loadCurrentPage(getFirstAndLastItem(currentPage + 1, pageNumbers))
+        }
       >
         ≫
       </a>
-      <a
-        href="javascript:;"
-        onClick={() => loadCurrentPage(pageNumbers.length)}
-      >
-        last
-      </a>
-    </div>
+      <a onClick={() => loadCurrentPage(pageNumbers.length)}>last</a>
+
+    </Col>
   );
 }
 

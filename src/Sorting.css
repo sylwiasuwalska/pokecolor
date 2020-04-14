@@ -1,0 +1,48 @@
+.sorting {
+    display: block;
+    padding-top: 1rem;
+    justify-content: center;
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+.sorting p {
+    padding: 0;
+    margin: 0 5px;
+}
+
+.sorting button {
+    border: none;
+    color: black;
+    padding: 0 4px;
+    text-decoration: none;
+    min-width: 200px;
+}
+
+.sorting button.active {
+    background-color: #bbb;
+    color: white;
+}
+
+.sorting button:hover:not(.active) {background-color: #d6eaf8;}
+
+button.ascending::after {
+    content: "↑";
+    display: inline-block;
+    padding-left: 1em;
+}
+
+button.descending::after {
+    content: "↓";
+    display: inline-block;
+    padding-left: 1em;
+}
+
+@media only screen  and (max-width : 1130px) {
+
+   .sorting {
+       display: block;
+       width: 100%
+    }
+
+}

@@ -1,8 +1,10 @@
 .filtering {
-    display: block;
-    padding-bottom: 2vh;
-    float: left;
-    margin-left: 4rem;
+    display: flex;
+    justify-content: flex-start;
+}
+.filtering input {
+    width: 80%;
+    border-radius: 0;
 }
 
 .filtering p {
@@ -13,7 +15,9 @@
 @media only screen  and (max-width: 1130px) {
     .filtering {
         display: block;
-        float: left;
+        width: 100%;
+
     }
+
 
 }

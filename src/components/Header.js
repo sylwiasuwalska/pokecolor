@@ -3,7 +3,7 @@ import "../Header.css"
 
 function Header(props) {
     return (
-        <h1>PoKePedia</h1>
+        <h1>PoKeColor</h1>
     );
 }
 
