@@ -19,7 +19,7 @@ const Store = ({children}) => {
                 setError("");
                 pokeDataFetch(response.data);
             })
-            .catch(() => {
+            .catch((err) => {
                 setLoading(false);
                 setPokeState("");
                 setError(true);
@@ -28,15 +28,13 @@ const Store = ({children}) => {
 
     //TODO: refactor blocks of code as functions
     const pokeDataFetch = (data) => {
-        const responsesSpecies = [];
 
-        data.pokemon_species.map((currentElement, index) => {
-            responsesSpecies[index] = axios
+        const responsesSpecies = data.pokemon_species.map((currentElement, index) => {
+           return axios
                 .get(currentElement.url)
                 .then((response) => {
-                    const responsesPokemon = [];
-                    response.data.varieties.map((currEl, ind) => {
-                        responsesPokemon[ind] = axios
+                    const responsesPokemon = response.data.varieties.map((currEl, ind) => {
+                        return axios
                             .get(currEl.pokemon.url)
                             .then((response) => {
                                 const name = response.data.name;

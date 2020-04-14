@@ -34,8 +34,6 @@ function PokeContainer(props) {
         setPokeData(filteredData);
     };
 
-    const loadCurrentPage = (pageNumber) => setCurrentPage(pageNumber);
-
     // rendering data
     const listItems = (array) =>
         array.map((element, index) => <li key={index}>{element}</li>);
@@ -46,6 +44,7 @@ function PokeContainer(props) {
         const indexOfFirstItem = indexOfLastItem - itemsPerPage;
         const currentItems = pokeData.slice(indexOfFirstItem, indexOfLastItem);
 
+        //TODO check this function
         const colorElement = colors.find((element) => {
             if (color === element.id) return element.color;
         });
@@ -100,7 +99,7 @@ function PokeContainer(props) {
     }, [filterWord]);
 
     useEffect(() => {
-        if (state[0]) {
+        if (state) {
             setPokeData(state);
             setCurrentPage(1);
         }
@@ -136,7 +135,7 @@ function PokeContainer(props) {
                 <Pagination
                     rowsPerPage={itemsPerPage}
                     totalRows={pokeData.length}
-                    loadCurrentPage={loadCurrentPage}
+                    setCurrentPage={setCurrentPage}
                     currentPage={currentPage}
                 />
             </Row>
