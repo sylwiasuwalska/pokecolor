@@ -6,11 +6,11 @@ import Sorting from "./Sorting";
 import "../styles/PokeContainer.css";
 import loader from "../ring.svg";
 import { colors } from "../colors.js";
-import { Col, Container, Row } from "react-bootstrap";
+import {Container, Row } from "react-bootstrap";
 
 function PokeContainer(props) {
   const [state, error, dataPreparing] = useContext(stateContext);
-  const [color, setColor] = useContext(colorContext);
+  const [color] = useContext(colorContext);
   const [pokeData, setPokeData] = useState(state);
 
   const [currentPage, setCurrentPage] = useState(1);

@@ -1,5 +1,5 @@
-import React, {Fragment} from "react";
-import {Col, Form} from "react-bootstrap";
+import React from "react";
+import {Col} from "react-bootstrap";
 import "../styles/Filtering.css";
 import { colors } from "../colors.js";
 
