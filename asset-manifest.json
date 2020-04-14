@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/pokecolor/static/css/main.78d20fa8.chunk.css",
+    "main.css": "/pokecolor/static/css/main.cc16f6fd.chunk.css",
     "main.js": "/pokecolor/static/js/main.cde5476f.chunk.js",
     "main.js.map": "/pokecolor/static/js/main.cde5476f.chunk.js.map",
     "runtime-main.js": "/pokecolor/static/js/runtime-main.6300bb53.js",
@@ -9,10 +9,10 @@
     "static/js/2.56bea641.chunk.js": "/pokecolor/static/js/2.56bea641.chunk.js",
     "static/js/2.56bea641.chunk.js.map": "/pokecolor/static/js/2.56bea641.chunk.js.map",
     "index.html": "/pokecolor/index.html",
-    "precache-manifest.11e3d701ec235bdd02659eb652ab0541.js": "/pokecolor/precache-manifest.11e3d701ec235bdd02659eb652ab0541.js",
+    "precache-manifest.cccab25289be5c23877d44b2f1ebf769.js": "/pokecolor/precache-manifest.cccab25289be5c23877d44b2f1ebf769.js",
     "service-worker.js": "/pokecolor/service-worker.js",
     "static/css/2.de424728.chunk.css.map": "/pokecolor/static/css/2.de424728.chunk.css.map",
-    "static/css/main.78d20fa8.chunk.css.map": "/pokecolor/static/css/main.78d20fa8.chunk.css.map",
+    "static/css/main.cc16f6fd.chunk.css.map": "/pokecolor/static/css/main.cc16f6fd.chunk.css.map",
     "static/js/2.56bea641.chunk.js.LICENSE.txt": "/pokecolor/static/js/2.56bea641.chunk.js.LICENSE.txt",
     "static/media/Header.css": "/pokecolor/static/media/pokemon_solid-webfont.40209a69.woff2",
     "static/media/ring.svg": "/pokecolor/static/media/ring.4c461beb.svg"
@@ -21,7 +21,7 @@
     "static/js/runtime-main.6300bb53.js",
     "static/css/2.de424728.chunk.css",
     "static/js/2.56bea641.chunk.js",
-    "static/css/main.78d20fa8.chunk.css",
+    "static/css/main.cc16f6fd.chunk.css",
     "static/js/main.cde5476f.chunk.js"
   ]
 }
