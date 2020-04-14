@@ -5,7 +5,7 @@ const Store = ({children}) => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
     const [dataPreparing, setDataPreparing] = useState(true);
-    const [color, setColor] = useState(1)
+    const [color, setColor] = useState(6)
     const [pokeState, setPokeState] = useState({});
 
     //TODO: decide what to do with loading
@@ -17,10 +17,7 @@ const Store = ({children}) => {
             .then((response) => {
                 setLoading(false);
                 setError("");
-                return response.data;
-            })
-            .then((data) => {
-                pokeDataFetch(data);
+                pokeDataFetch(response.data);
             })
             .catch(() => {
                 setLoading(false);
@@ -54,10 +51,7 @@ const Store = ({children}) => {
                                 return {name, id, baseExperience, types, abilities};
                             });
                     });
-
-                    return Promise.all(responsesPokemon).then((data) => {
-                        return data;
-                    });
+                    return Promise.all(responsesPokemon)
                 })
 
                 .catch(() => {
