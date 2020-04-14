@@ -26,10 +26,10 @@ Project is created using:
 * React Testing Library with JEST
 
 ## Features
-* displaying data fetched from APIs
+* displays data fetched from APIs
 * provides cards with each Pokemon's image, name, Pokedex ID, base experience,  types, abilities
-* sorting by ascending or descending order after click on given buttons, each button has indicators of sort order
-* filtering by all fields of table
+* sorts by ascending or descending order after click on given buttons, each button has indicators of sort order
+* filters by all fields of table
 * responsive layout for comfortable viewing from smaller devices
 * pagination
 	
