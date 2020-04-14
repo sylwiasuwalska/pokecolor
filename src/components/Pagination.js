@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/Pagination.css";
-import {Col} from "react-bootstrap";
+import { Col } from "react-bootstrap";
 
 function Pagination({ rowsPerPage, totalRows, loadCurrentPage, currentPage }) {
   const pageNumbers = [];
@@ -20,7 +20,6 @@ function Pagination({ rowsPerPage, totalRows, loadCurrentPage, currentPage }) {
 
   return (
     <Col sm={12} md={6} className="pagination">
-
       <a onClick={() => loadCurrentPage(1)}>first</a>
 
       <a
@@ -42,7 +41,6 @@ function Pagination({ rowsPerPage, totalRows, loadCurrentPage, currentPage }) {
         ≫
       </a>
       <a onClick={() => loadCurrentPage(pageNumbers.length)}>last</a>
-
     </Col>
   );
 }

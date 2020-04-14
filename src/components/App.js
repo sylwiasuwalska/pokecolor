@@ -6,15 +6,16 @@ import PokeContainer from "./PokeContainer";
 
 import "../styles/App.css";
 import ButtonContainer from "./ButtonContainer";
+import { Container } from "react-bootstrap";
 
 function App() {
   return (
     <Store>
-      <div className="App">
-        <Header />
-        <ButtonContainer />
-        <PokeContainer />
-      </div>
+      <Container className="App">
+          <Header />
+          <ButtonContainer />
+          <PokeContainer />
+      </Container>
     </Store>
   );
 }

@@ -25,9 +25,7 @@
 @media only screen  and (max-width : 1130px) {
 
     .pagination {
-        display: inline-flex;
         justify-content: center;
-        width: 100%;
     }
 
 

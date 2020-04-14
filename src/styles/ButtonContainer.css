@@ -1,7 +1,9 @@
 .buttonContainer {
     margin-bottom: 1rem;
+    padding: 0;
 }
-Button {
-    width: 250px;
+.buttonContainer Button {
+    width: 19%;
+    min-width: 250px;
     margin: 0.25rem;
 }

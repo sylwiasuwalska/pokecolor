@@ -4,11 +4,6 @@
     padding-bottom: 5rem;
 }
 
-.container {
-    margin: 0 auto;
-    padding: 0;
-}
-
 .pokeElement {
     display: inline-flex;
     margin: 1rem;
