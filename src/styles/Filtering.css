@@ -1,21 +1,20 @@
 .filtering {
-    display: flex;
-    justify-content: flex-start;
+  display: flex;
+  justify-content: flex-start;
 }
+
 .filtering input {
-    width: 80%;
-    border-radius: 0;
+  width: 80%;
+  border-radius: 0;
 }
 
 .filtering p {
-    display: inline-block;
-    margin: 8px;
+  display: inline-block;
+  margin: 8px;
 }
 
-@media only screen  and (max-width: 1130px) {
-    .filtering {
-        justify-content: center;
-    }
-
-
+@media only screen and (max-width: 1130px) {
+  .filtering {
+    justify-content: center;
+  }
 }

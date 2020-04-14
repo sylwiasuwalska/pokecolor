@@ -1,32 +1,30 @@
 .pagination {
-    display: flex;
-    justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .pagination p {
-    margin: 8px;
+  margin: 8px;
 }
 
 .pagination a {
-    color: black;
-    padding: 8px 8px;
-    text-decoration: none;
-    cursor: pointer;
+  color: black;
+  padding: 8px 8px;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .pagination a.active {
-    background-color: #bbb;
-    color: white;
+  background-color: #bbb;
+  color: white;
 }
 
-.pagination a:hover:not(.active) {background-color: #d6eaf8;}
+.pagination a:hover:not(.active) {
+  background-color: #d6eaf8;
+}
 
-
-@media only screen  and (max-width : 1130px) {
-
-    .pagination {
-        justify-content: center;
-    }
-
-
+@media only screen and (max-width: 1130px) {
+  .pagination {
+    justify-content: center;
+  }
 }
