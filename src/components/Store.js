@@ -5,13 +5,13 @@ const Store = ({children}) => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
     const [dataPreparing, setDataPreparing] = useState(true);
-    const [color, setColor] = useState(6)
+    const [color, setColor] = useState(6);
     const [pokeState, setPokeState] = useState({});
 
     //TODO: decide what to do with loading
 
     useEffect(() => {
-        setDataPreparing(true)
+        setDataPreparing(true);
         axios
             .get(`https://pokeapi.co/api/v2/pokemon-color/${color}/`)
             .then((response) => {
@@ -26,48 +26,48 @@ const Store = ({children}) => {
             });
     }, [color]);
 
-    //TODO: refactor blocks of code as functions
     const pokeDataFetch = (data) => {
+        const responsesSpecies = data.pokemon_species.map(
+            (currentElement, index) => {
+                return axios
+                    .get(currentElement.url)
+                    .then((response) => {
+                        const responsesPokemon = response.data.varieties.map(
+                            (currEl, ind) => {
+                                return axios.get(currEl.pokemon.url).then((response) => {
+                                    return setAsPoke(response.data);
+                                });
+                            }
+                        );
+                        return Promise.all(responsesPokemon);
+                    })
 
-        const responsesSpecies = data.pokemon_species.map((currentElement, index) => {
-           return axios
-                .get(currentElement.url)
-                .then((response) => {
-                    const responsesPokemon = response.data.varieties.map((currEl, ind) => {
-                        return axios
-                            .get(currEl.pokemon.url)
-                            .then((response) => {
-                                const name = response.data.name;
-                                const id = response.data.id;
-                                const baseExperience = response.data.base_experience;
-                                const types = response.data.types.map(
-                                    (property) => property.type.name
-                                );
-                                const abilities = response.data.abilities.map(
-                                    (property) => property.ability.name
-                                );
-                                return {name, id, baseExperience, types, abilities};
-                            });
+                    .catch(() => {
+                        setError(true);
                     });
-                    return Promise.all(responsesPokemon)
-                })
-
-                .catch(() => {
-                    setError(true);
-                });
-        });
+            }
+        );
 
         Promise.all(responsesSpecies).then((data) => {
-           setPokeState(data.flat());
-           setDataPreparing(false)
+            setPokeState(data.flat());
+            setDataPreparing(false);
         });
+    };
+
+    const setAsPoke = (data) => {
+        const name = data.name;
+        const id = data.id;
+        const baseExperience = data.base_experience;
+        const types = data.types.map((property) => property.type.name);
+        const abilities = data.abilities.map((property) => property.ability.name);
+        return {name, id, baseExperience, types, abilities};
     };
 
     return (
         <colorContext.Provider value={[color, setColor]}>
-                <stateContext.Provider value={[pokeState, error, dataPreparing]}>
-                        {children}
-                </stateContext.Provider>
+            <stateContext.Provider value={[pokeState, error, dataPreparing]}>
+                {children}
+            </stateContext.Provider>
         </colorContext.Provider>
     );
 };
