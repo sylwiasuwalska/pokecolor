@@ -3,18 +3,28 @@
 exports[`should take a snapshot of App component 1`] = `
 <DocumentFragment>
   <div
-    class="App"
+    class="App container"
   >
-    <h1>
-      PoKePedia
-    </h1>
     <div
-      class="buttonContainer"
+      class="row"
     >
-      <h4>
-        Choose color of Pokemons you want to see:
-      </h4>
-      <div>
+      <div
+        class="col"
+      >
+        <h1>
+          PoKeColor
+        </h1>
+      </div>
+    </div>
+    <div
+      class="row"
+    >
+      <div
+        class="buttonContainer col"
+      >
+        <h4>
+          Choose color of Pokemons you want to see:
+        </h4>
         <button
           class="btn btn-primary btn-lg"
           style="background-color: rgb(4, 0, 0); border-color: #040000; border-radius: 0; color: rgb(255, 255, 255);"
