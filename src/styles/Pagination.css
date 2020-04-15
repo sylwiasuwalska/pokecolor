@@ -7,19 +7,21 @@
   margin: 8px;
 }
 
-.pagination a {
+.pagination button {
+  background-color: transparent;
+  border: none;
   color: black;
   padding: 8px 8px;
   text-decoration: none;
   cursor: pointer;
 }
 
-.pagination a.active {
-  background-color: #bbb;
-  color: white;
-}
+/*.pagination button.active {*/
+/*  background-color: #bbb;*/
+/*  color: white;*/
+/*}*/
 
-.pagination a:hover:not(.active) {
+.pagination button:hover:not(.active) {
   background-color: #d6eaf8;
 }
 

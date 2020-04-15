@@ -20,27 +20,27 @@ function Pagination({ rowsPerPage, totalRows, setCurrentPage, currentPage }) {
 
   return (
     <Col sm={12} md={6} className="pagination">
-      <a onClick={() => setCurrentPage(1)}>first</a>
+      <button onClick={() => setCurrentPage(1)}>first</button>
 
-      <a
+      <button
         onClick={() =>
           setCurrentPage(getFirstAndLastItem(currentPage - 1, pageNumbers))
         }
       >
         ≪
-      </a>
+      </button>
 
-      <p>
+      <button>
         page {currentPage} from {pageNumbers.length}
-      </p>
-      <a
+      </button>
+      <button
         onClick={() =>
           setCurrentPage(getFirstAndLastItem(currentPage + 1, pageNumbers))
         }
       >
         ≫
-      </a>
-      <a onClick={() => setCurrentPage(pageNumbers.length)}>last</a>
+      </button>
+      <button onClick={() => setCurrentPage(pageNumbers.length)}>last</button>
     </Col>
   );
 }
