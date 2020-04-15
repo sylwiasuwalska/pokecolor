@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/pokecolor/static/css/main.859bdf18.chunk.css",
-    "main.js": "/pokecolor/static/js/main.42f2d075.chunk.js",
-    "main.js.map": "/pokecolor/static/js/main.42f2d075.chunk.js.map",
+    "main.css": "/pokecolor/static/css/main.1a6ab98d.chunk.css",
+    "main.js": "/pokecolor/static/js/main.ca2edd4f.chunk.js",
+    "main.js.map": "/pokecolor/static/js/main.ca2edd4f.chunk.js.map",
     "runtime-main.js": "/pokecolor/static/js/runtime-main.6300bb53.js",
     "runtime-main.js.map": "/pokecolor/static/js/runtime-main.6300bb53.js.map",
     "static/css/2.de424728.chunk.css": "/pokecolor/static/css/2.de424728.chunk.css",
     "static/js/2.076fe236.chunk.js": "/pokecolor/static/js/2.076fe236.chunk.js",
     "static/js/2.076fe236.chunk.js.map": "/pokecolor/static/js/2.076fe236.chunk.js.map",
     "index.html": "/pokecolor/index.html",
-    "precache-manifest.9d7483500b4ad4ea02f51f47b4ab02b2.js": "/pokecolor/precache-manifest.9d7483500b4ad4ea02f51f47b4ab02b2.js",
+    "precache-manifest.d99dcd28a43c5d9076495d8e959ecc64.js": "/pokecolor/precache-manifest.d99dcd28a43c5d9076495d8e959ecc64.js",
     "service-worker.js": "/pokecolor/service-worker.js",
     "static/css/2.de424728.chunk.css.map": "/pokecolor/static/css/2.de424728.chunk.css.map",
-    "static/css/main.859bdf18.chunk.css.map": "/pokecolor/static/css/main.859bdf18.chunk.css.map",
+    "static/css/main.1a6ab98d.chunk.css.map": "/pokecolor/static/css/main.1a6ab98d.chunk.css.map",
     "static/js/2.076fe236.chunk.js.LICENSE.txt": "/pokecolor/static/js/2.076fe236.chunk.js.LICENSE.txt",
     "static/media/Header.css": "/pokecolor/static/media/pokemon_solid-webfont.40209a69.woff2",
     "static/media/ring.svg": "/pokecolor/static/media/ring.4c461beb.svg"
@@ -21,7 +21,7 @@
     "static/js/runtime-main.6300bb53.js",
     "static/css/2.de424728.chunk.css",
     "static/js/2.076fe236.chunk.js",
-    "static/css/main.859bdf18.chunk.css",
-    "static/js/main.42f2d075.chunk.js"
+    "static/css/main.1a6ab98d.chunk.css",
+    "static/js/main.ca2edd4f.chunk.js"
   ]
 }
