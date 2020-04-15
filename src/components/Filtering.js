@@ -1,12 +1,10 @@
 import React from "react";
-import {Col} from "react-bootstrap";
+import { Col } from "react-bootstrap";
 import "../styles/Filtering.css";
 import { colors } from "../colors.js";
 
 function Filtering({ color, setFilterWord, setCurrentPage }) {
-  const colorName = colors.find((element) => {
-    if (color === element.id) return element.name;
-  });
+  const colorName = colors.find((element) => color === element.id);
 
   return (
     <Col sm={12} md={6} className="filtering">

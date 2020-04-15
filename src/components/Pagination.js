@@ -31,7 +31,7 @@ function Pagination({ rowsPerPage, totalRows, setCurrentPage, currentPage }) {
       </button>
 
       <button>
-        page {currentPage} from {pageNumbers.length}
+        page {currentPage} of {pageNumbers.length}
       </button>
       <button
         onClick={() =>

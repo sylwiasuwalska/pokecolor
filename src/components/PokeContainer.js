@@ -44,10 +44,7 @@ function PokeContainer(props) {
         const indexOfFirstItem = indexOfLastItem - itemsPerPage;
         const currentItems = pokeData.slice(indexOfFirstItem, indexOfLastItem);
 
-        //TODO check this function
-        const colorElement = colors.find((element) => {
-            if (color === element.id) return element.color;
-        });
+        const colorElement = colors.find((element) => color===element.id);
 
         const checkIfWhite = () =>
             colorElement.color === "#faf4ee" ? "#626466" : "#fff";
