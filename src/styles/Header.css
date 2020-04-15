@@ -1,18 +1,17 @@
 @font-face {
-    font-family: 'pokemon_solidnormal';
-    src: url('pokemon_solid-webfont.woff2') format('woff2'),
-    url('pokemon_solid-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
+  font-family: "pokemon_solidnormal";
+  src: url("pokemon_solid-webfont.woff2") format("woff2"),
+    url("pokemon_solid-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 h1 {
-    font-family: pokemon_solidnormal, sans-serif;
-    font-size: 5rem;
-    -webkit-text-stroke: 3px #4169e1;
-    -webkit-text-fill-color: #fff200;
-    margin: 0;
-    margin-top: 2rem;
-    padding-bottom: 2rem;
+  font-family: pokemon_solidnormal, sans-serif;
+  font-size: 5rem;
+  -webkit-text-stroke: 3px #4169e1;
+  -webkit-text-fill-color: #fff200;
+  margin: 0;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
 }

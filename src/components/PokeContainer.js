@@ -8,7 +8,7 @@ import loader from "../ring.svg";
 import {colors} from "../colors.js";
 import {Col, Row} from "react-bootstrap";
 
-function PokeContainer(props) {
+function PokeContainer() {
     const [state, error, dataPreparing] = useContext(stateContext);
     const [color] = useContext(colorContext);
     const [pokeData, setPokeData] = useState(state);
@@ -44,7 +44,7 @@ function PokeContainer(props) {
         const indexOfFirstItem = indexOfLastItem - itemsPerPage;
         const currentItems = pokeData.slice(indexOfFirstItem, indexOfLastItem);
 
-        const colorElement = colors.find((element) => color===element.id);
+        const colorElement = colors.find((element) => color === element.id);
 
         const checkIfWhite = () =>
             colorElement.color === "#faf4ee" ? "#626466" : "#fff";

@@ -16,11 +16,6 @@
   cursor: pointer;
 }
 
-/*.pagination button.active {*/
-/*  background-color: #bbb;*/
-/*  color: white;*/
-/*}*/
-
 .pagination button:hover:not(.active) {
   background-color: #d6eaf8;
 }

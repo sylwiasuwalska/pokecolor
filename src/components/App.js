@@ -6,18 +6,18 @@ import PokeContainer from "./PokeContainer";
 
 import "../styles/App.css";
 import ButtonContainer from "./ButtonContainer";
-import { Container } from "react-bootstrap";
+import {Container} from "react-bootstrap";
 
 function App() {
-  return (
-    <Store>
-      <Container className="App">
-          <Header />
-          <ButtonContainer />
-          <PokeContainer />
-      </Container>
-    </Store>
-  );
+    return (
+        <Store>
+            <Container className="App">
+                <Header/>
+                <ButtonContainer/>
+                <PokeContainer/>
+            </Container>
+        </Store>
+    );
 }
 
 export default App;
