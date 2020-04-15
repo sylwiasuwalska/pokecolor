@@ -13,9 +13,9 @@
 Using data from https://pokeapi.co/ this project gathers information about Pokemons, divided them by colors. Project made as an assignment for summer internship. 
 
 ## Live demo 
-You can find ....
+You can find live demo here: https://sylwiasuwalska.github.io/pokecolor/
 
-![view_from_screen](./viewScreen.JPG)
+![view_from_screen](./viewScreen.jpg)
 
 ## Technologies
 Project is created using:
@@ -32,6 +32,7 @@ Project is created using:
 * filtering by all fields of table
 * responsive layout for comfortable viewing from smaller devices
 * pagination
+* simple tests
 	
 ## Setup
 To run this project, install it locally using npm:
@@ -50,6 +51,7 @@ $ npm start
 ```
 
 ## Sources
-* header font comes from https://www.onlinewebfonts.com/
+* pictures of Pokemons come from https://pokeres.bastionbot.org/
+* image of unavailable picture come from https://www.freeiconspng.com/uploads/no-image-icon-15.png
 * loading spinner comes from https://loading.io/
 * favicon comes from https://pngimg.com/download/27658
