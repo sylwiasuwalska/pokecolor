@@ -39,7 +39,7 @@ To run this project, install it locally using npm:
 
 ```
 # Clone this repository
-$ git clone https://github.com/sylwiasuwalska/table-for-companies
+$ git clone https://github.com/sylwiasuwalska/pokecolor
 
 # Go into the repository directory
 
