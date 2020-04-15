@@ -8,8 +8,6 @@ const Store = ({children}) => {
     const [color, setColor] = useState(6);
     const [pokeState, setPokeState] = useState({});
 
-    //TODO: decide what to do with loading
-
     useEffect(() => {
         setDataPreparing(true);
         axios
@@ -41,7 +39,6 @@ const Store = ({children}) => {
                         );
                         return Promise.all(responsesPokemon);
                     })
-
                     .catch(() => {
                         setError(true);
                     });
